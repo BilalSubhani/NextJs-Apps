@@ -1,0 +1,48 @@
+my-nextjs-app/
+├── public/                    # Static assets (images, fonts, icons)
+│
+├── src/
+│   ├── app/                   # App Router routes + layouts
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── (auth)/            # Route group (auth)
+│   │   │   └── login/page.tsx
+│   │   ├── dashboard/
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   └── api/route.ts       # Server actions / API routes
+│   │
+│   ├── features/              # Feature-based modules
+│   │   ├── auth/
+│   │   │   ├── components/LoginForm.tsx
+│   │   │   ├── hooks/useAuth.ts
+│   │   │   ├── lib/authService.ts
+│   │   │   └── types.ts
+│   │   └── dashboard/
+│   │       ├── components/DashboardStats.tsx
+│   │       ├── hooks/useDashboard.ts
+│   │       ├── lib/dashboardUtils.ts
+│   │       └── types.ts
+│   │
+│   ├── shared/                # Cross-feature resources
+│   │   ├── components/        # Pure UI components
+│   │   ├── hooks/             # Reusable hooks
+│   │   ├── layouts/           # Shared layout components
+│   │   ├── services/          # API clients, config, etc.
+│   │   └── utils/             # General utility functions
+│   │
+│   ├── components/            # Globally reusable UI components
+│   ├── hooks/                 # App-wide custom hooks
+│   ├── lib/                   # Shared utilities, helper methods
+│   ├── styles/                # Global styles, Tailwind config
+│   ├── types/                 # Global TypeScript types
+│   └── store/                 # Zustand/Redux global state
+│
+├── tests/                     # Unit & integration tests
+│   └── components/
+│
+├── .env(.local/.production)  # Env variables
+├── next.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
